@@ -32,27 +32,32 @@ $(function() {
          * in the allFeeds object and ensures it has a URL defined
          * and that the URL is not empty.
          */
-         beforeEach(function () {
-           console.log('at beforeEach');
-         });
-
+         // beforeEach(function () {
+         //   console.log('at beforeEach');
+         // });
+         
          it('each feed has a defined URL', function() {
-           expect(allFeeds.url).toBeDefined();
-           expect(allFeeds.url.length).not.toBe(0);
+           for(var i = 0; i < allFeeds.length; i++) {
+             expect(allFeeds[i].url).toBeDefined();
+             expect(allFeeds[i].url.length).not.toBe(0);
+           }
          });
 
 
 
         /* TODO: Write a test that loops through each feed
-         * in the allFeeds object and ensures it has a name defined
-         * and that the name is not empty.
-         */
-         it('each feed has a defined name', function() {
-           expect(allFeeds.name).toBeDefined();
-           expect(allFeeds.url.length).not.toBe(0);
-         });
-         
+        * in the allFeeds object and ensures it has a name defined
+        * and that the name is not empty.
+        */
+        it('each feed has a defined name', function() {
+          for(var i = 0; i < allFeeds.length; i ++) {
+            expect(allFeeds[i].name).toBeDefined();
+            expect(allFeeds[i].name.length).not.toBe(0);
+          }
+        });
+
     });
+
 
 
     /* TODO: Write a new test suite named "The menu" */
@@ -84,4 +89,6 @@ $(function() {
          * by the loadFeed function that the content actually changes.
          * Remember, loadFeed() is asynchronous.
          */
+
+
 }());
