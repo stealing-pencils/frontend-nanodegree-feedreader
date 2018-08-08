@@ -77,8 +77,15 @@ $(function() {
           * clicked and does it hide when clicked again.
           */
           it('menu visibility changes on click', function() {
-            expect()
-          })
+            $('.menu-icon-link').trigger('click');
+            expect($('body').hasClass('menu-hidden')).toBe(false);
+            $('.menu-icon-link').trigger('click');
+            expect($('body').hasClass('menu-hidden')).toBe(true);
+          });
+
+          // it('menu visibility changes on click', function() {
+          //   expect('toggleClass').toHaveBeenTriggeredOn('menu-hidden');
+          // })
 
 
     });
