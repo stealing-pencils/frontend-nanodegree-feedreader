@@ -12,7 +12,7 @@ In this project you are given a web-based application that reads RSS feeds. The 
 4. If using Chrome, open devtools to review the jasmine test via the feedreader.js file
 
 
-# Feed Reader Project Requirements
+## Feed Reader Project Requirements
 
 Review the Feed Reader Testing [Project Rubric](https://review.udacity.com/#!/projects/3442558598/rubric)
 
