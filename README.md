@@ -41,11 +41,11 @@ Review the Feed Reader Testing [Project Rubric](https://review.udacity.com/#!/pr
 
 # Support
 
-* [Using toBeTruthy vs toBe(true)] (https://vincenttunru.com/toBeTruthy-vs-toBe-true/)
-* [Ryan Boris' Udacity FEND P4 Walkthrough] (https://www.youtube.com/watch?v=7kOBXPbDmyw&feature=youtu.be)
-* [Matthew Cranford's Walkthrough]
-(https://matthewcranford.com/feed-reader-walkthrough-part-4-async-tests/)
-* [breazeal.com Jasmine:Understanding the Difference between beforeAll and beforeEach]
-(http://breazeal.com/blog/jasmineBefore.html)
-* [Jasmine jquery]
-(https://github.com/velesin/jasmine-jquery)
+* Using toBeTruthy vs toBe(true): https://vincenttunru.com/toBeTruthy-vs-toBe-true/
+* Ryan Boris' Udacity FEND P4 Walkthrough: https://www.youtube.com/watch?v=7kOBXPbDmyw&feature=youtu.be
+* Matthew Cranford's Walkthrough
+https://matthewcranford.com/feed-reader-walkthrough-part-4-async-tests/
+* breazeal.com Jasmine:Understanding the Difference between beforeAll and beforeEach
+http://breazeal.com/blog/jasmineBefore.html
+* Jasmine jquery
+https://github.com/velesin/jasmine-jquery
