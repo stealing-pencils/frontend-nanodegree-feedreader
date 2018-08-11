@@ -40,17 +40,14 @@ $(function() {
 
 
     describe('The menu', function() {
-        /* ensures the menu element is
-         * hidden by default. You'll have to analyze the HTML and
-         * the CSS to determine how we're performing the
-         * hiding/showing of the menu element.*/
+        /* ensures the menu element is hidden by default*/
          it('menu is hidden', function() {
            expect($('body').hasClass('menu-hidden')).toBe(true);
          })
 
          /* ensures the menu changes
           * visibility when the menu icon is clicked. This test
-          * should have two expectations: does the menu display when
+          * has two expectations: does the menu display when
           * clicked and does it hide when clicked again.*/
           it('menu visibility changes on click', function() {
             $('.menu-icon-link').trigger('click');
@@ -61,9 +58,7 @@ $(function() {
     });
 
     describe('Initial Entries', function(){
-        /* ensures when the loadFeed
-         * function is called and completes its work, there is at least
-         * a single .entry element within the .feed container.*/
+        /* ensures when the loadFeed function is called and completes its work */
          beforeEach(function(done) {
            loadFeed(0, done);
          });
