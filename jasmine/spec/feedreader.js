@@ -58,13 +58,15 @@ $(function() {
     });
 
     describe('Initial Entries', function(){
+        var feed = $('.feed');
         /* ensures when the loadFeed function is called and completes its work */
          beforeEach(function(done) {
            loadFeed(0, done);
          });
 
          it('loadFeed completes its work', function() {
-           expect($('.feed').length).not.toBe(0);
+           expect(feed.children.length).toBeGreaterThan(0);
+           console.log(feed.children.length);
          });
     });
 
