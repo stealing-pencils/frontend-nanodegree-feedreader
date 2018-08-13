@@ -58,36 +58,37 @@ $(function() {
     });
 
     describe('Initial Entries', function(){
-        var feed = $('.feed');
         /* ensures when the loadFeed function is called and completes its work */
          beforeEach(function(done) {
            loadFeed(0, done);
          });
 
          it('loadFeed completes its work', function() {
-           expect(feed.children.length).toBeGreaterThan(0);
-           console.log(feed.children.length);
+          expect($('.feed .entry').length).toBeGreaterThan(0);
+          console.log($('.feed .entry').length);
          });
     });
 
     describe('New Feed Selection', function(){
-        var feed = $('.feed');
         var feedArray = [];
         /* ensures when a new feed is loaded
          * by the loadFeed function that the content actually changes.*/
          beforeEach(function(done) {
-           loadFeed(0);
-            var feedOne = feed[0].innerText;
-            feedArray.push(feedOne);
-            loadFeed(1,done);
+           loadFeed(0, function() {
+             var feedOne = $('.entry')[0].innerText;
+             feedArray.push(feedOne);
+           });
+            loadFeed(1, function() {
+              var feedTwo = $('.entry')[0].innerText;
+              feedArray.push(feedTwo);
+              done();
+            });
         });
 
         it('new content in reloaded Feed', function() {
-          var feedTwo = feed[0].innerText;
-          feedArray.push(feedTwo);
-          expect(feedArray[0]).not.toContain(feedArray[1]);
           console.log(feedArray[0]);
           console.log(feedArray[1]);
+          expect(feedArray[0]).not.toEqual(feedArray[1]);
         });
 
    });
