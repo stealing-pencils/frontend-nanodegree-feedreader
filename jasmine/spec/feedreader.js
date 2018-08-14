@@ -70,25 +70,22 @@ $(function() {
     });
 
     describe('New Feed Selection', function(){
-        var feedArray = [];
+        var firstFeed;
+        var secondFeed;
         /* ensures when a new feed is loaded
          * by the loadFeed function that the content actually changes.*/
          beforeEach(function(done) {
            loadFeed(0, function() {
-             var feedOne = $('.feed').html();
-             feedArray.push(feedOne);
+             firstFeed = $('.feed').html();
+             loadFeed(1, done);
            });
-            loadFeed(1, function() {
-              var feedTwo = $('.feed').html();
-              feedArray.push(feedTwo);
-              done();
-            });
         });
 
         it('new content in reloaded Feed', function() {
-          console.log(feedArray[0]);
-          console.log(feedArray[1]);
-          expect(feedArray[0]).not.toEqual(feedArray[1]);
+          secondFeed = ($('.feed').html());
+          expect(firstFeed).not.toEqual(secondFeed);
+          console.log(firstFeed);
+          console.log(secondFeed);
         });
 
    });
