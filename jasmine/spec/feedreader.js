@@ -75,11 +75,11 @@ $(function() {
          * by the loadFeed function that the content actually changes.*/
          beforeEach(function(done) {
            loadFeed(0, function() {
-             var feedOne = $('.entry')[0].innerText;
+             var feedOne = $('.feed').html();
              feedArray.push(feedOne);
            });
             loadFeed(1, function() {
-              var feedTwo = $('.entry')[0].innerText;
+              var feedTwo = $('.feed').html();
               feedArray.push(feedTwo);
               done();
             });
